@@ -133,7 +133,7 @@ python app.py
 - Consistent environment
 - Dễ deploy
 - Isolation
-- Reproducible builds
+- Reproducible builds                
 
 ###  Exercise 2.1: Dockerfile cơ bản
 
@@ -175,9 +175,9 @@ cd ../production
 ```
 
 **Nhiệm vụ:** Đọc `Dockerfile` và tìm:
-- Stage 1 làm gì?
-- Stage 2 làm gì?
-- Tại sao image nhỏ hơn?
+- Stage 1 làm gì? --> Để builder: dùng Image nặng nề để chạy
+- Stage 2 làm gì? --> Để runtime: copy từ Image sang một Image nhẹ để chạy
+- Tại sao image nhỏ hơn? --> Vì loại bỏ các buildtools sau khi cài đặt , Sử dụng Base Image siêu nhẹ cho Runtime như python:3.11-alpine hoặc python:3.11-slim, Chỉ Copy những gì thực sự cần (The "Distilled" Content)
 
 Build và so sánh:
 ```bash
