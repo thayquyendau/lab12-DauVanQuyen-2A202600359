@@ -124,7 +124,7 @@ app = FastAPI(
     title=settings.app_name,
     version=settings.app_version,
     lifespan=lifespan,
-    docs_url="/docs" if settings.environment != "production" else None,
+    docs_url=None,
     redoc_url=None,
 )
 
